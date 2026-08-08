@@ -14,7 +14,7 @@ export function Header(){
   <div className="shell flex h-20 items-center justify-between">
    <Link href="/" className="flex items-center gap-3" aria-label="Isnad Institute home">
     <Image src="/isnad-logos.png" alt="Isnad Institute" width={68} height={68}className="h-14 w-14 object-contain"priority/>
-    <span className="text-base font-semibold tracking-[0.04em] text-[#0F6B4F]">ISNAD INSTITUTE</span>
+    <span className="text-sm font-semibold tracking-[0.04em] text-[#0F6B4F] sm:text-lg">ISNAD INSTITUTE</span>
    </Link>
    <nav className="hidden items-center gap-6 lg:flex">{links.map(([l,h])=><Link key={h} href={h} className="text-sm font-semibold text-[#56615D] hover:text-[#0F6B4F]">{l}</Link>)}</nav>
    <div className="hidden lg:block"><Link href="/book-trial" className="btn-primary">Book Free Trial <ArrowRight className="ml-2 h-4 w-4"/></Link></div>
