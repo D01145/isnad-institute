@@ -13,7 +13,7 @@ export function Header(){
  return <header className="sticky top-0 z-50 border-b border-black/[0.05] bg-[#FAFAF8]/90 backdrop-blur-xl">
   <div className="shell flex h-20 items-center justify-between">
    <Link href="/" className="flex items-center gap-3" aria-label="Isnad Institute home">
-    <Image src="/isnad-logos.png" alt="Isnad Institute" width={58} height={58}className="h-12 w-12 object-contain"priority/>
+    <Image src="/isnad-logos.png" alt="Isnad Institute" width={60} height={60}className="h-12 w-12 object-contain"priority/>
     <span className="hidden text-base font-bold tracking-[0.08em] text-[#0F6B4F] sm:block">ISNAD INSTITUTE</span>
    </Link>
    <nav className="hidden items-center gap-6 lg:flex">{links.map(([l,h])=><Link key={h} href={h} className="text-sm font-semibold text-[#56615D] hover:text-[#0F6B4F]">{l}</Link>)}</nav>
