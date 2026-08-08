@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { margin:0; background:#FAFAF8; color:#1F2937; font-family: Arial, Helvetica, sans-serif; }
+* { box-sizing:border-box; }
+::selection { background:#0F6B4F; color:white; }
+
+.shell { @apply mx-auto max-w-7xl px-5 sm:px-7 lg:px-8; }
+.eyebrow { @apply text-xs font-bold uppercase tracking-[0.22em] text-[#0F6B4F]; }
+.display { @apply text-5xl font-black tracking-[-0.045em] text-[#17231F] sm:text-6xl lg:text-7xl; }
+.h2 { @apply text-3xl font-black tracking-[-0.035em] text-[#17231F] sm:text-4xl lg:text-5xl; }
+.lead { @apply text-lg leading-8 text-[#5D6964] sm:text-xl; }
+.card { @apply rounded-[2rem] border border-black/[0.06] bg-white shadow-[0_18px_60px_rgba(15,107,79,0.06)]; }
+.btn-primary { @apply inline-flex items-center justify-center rounded-full bg-[#0F6B4F] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#0B573F] hover:-translate-y-0.5; }
+.btn-secondary { @apply inline-flex items-center justify-center rounded-full border border-[#0F6B4F]/20 bg-white px-6 py-3.5 text-sm font-bold text-[#0F6B4F] transition hover:border-[#0F6B4F]/40 hover:-translate-y-0.5; }
+.soft-section { background:linear-gradient(180deg,#F4F6F2 0%,#FAFAF8 100%); }
+.green-section { background:linear-gradient(145deg,#0F6B4F 0%,#0B573F 100%); }
+.grid-fade { background-image:linear-gradient(rgba(15,107,79,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(15,107,79,.06) 1px,transparent 1px); background-size:42px 42px; mask-image:linear-gradient(to bottom,black,transparent); }
