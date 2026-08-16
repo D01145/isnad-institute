@@ -1,4 +1,53 @@
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Clock3, ShieldCheck } from "lucide-react";
+import TrialForm from "@/components/TrialForm";
 import { Page } from "@/components/SiteChrome";
-export const metadata={title:"Book a Free Trial",description:"Book a free trial lesson with Isnad Institute for online Arabic or Quran classes."};
-export default function Trial(){return <Page><section className="soft-section"><div className="shell grid gap-12 py-20 lg:grid-cols-[.9fr_1.1fr] lg:py-28"><div><p className="eyebrow">Free trial lesson</p><h1 className="display mt-4">Meet your teacher.<br/><span className="text-[#0F6B4F]">Find your path.</span></h1><p className="lead mt-6">Your trial helps us understand your goals, starting point and preferred class format before you decide to enroll.</p><div className="mt-8 grid gap-3">{["Discuss your learning goals","Experience a live teaching session","Get a starting-level recommendation","Explore private or small-group options","No obligation to enroll"].map(x=><div key={x} className="flex gap-3"><CheckCircle2 className="h-5 w-5 text-[#0F6B4F]"/><span className="font-semibold text-[#53615B]">{x}</span></div>)}</div></div><form action="mailto:hello@isnadinstitute.com" method="post" encType="text/plain" className="card p-7 sm:p-9"><h2 className="text-2xl font-black">Book your free trial</h2><p className="mt-2 text-[#66716C]">Tell us a little about the learner and we'll take it from there.</p><div className="mt-6 grid gap-5 sm:grid-cols-2"><label className="grid gap-2 text-sm font-bold">Full name<input required name="name" className="rounded-2xl border border-black/10 bg-[#FAFAF8] px-4 py-3.5"/></label><label className="grid gap-2 text-sm font-bold">Email<input required type="email" name="email" className="rounded-2xl border border-black/10 bg-[#FAFAF8] px-4 py-3.5"/></label></div><div className="mt-5 grid gap-5 sm:grid-cols-2"><label className="grid gap-2 text-sm font-bold">Program<select name="program" className="rounded-2xl border border-black/10 bg-[#FAFAF8] px-4 py-3.5"><option>Arabic Course</option><option>Quran Classes</option><option>Both</option></select></label><label className="grid gap-2 text-sm font-bold">Class preference<select name="class-format" className="rounded-2xl border border-black/10 bg-[#FAFAF8] px-4 py-3.5"><option>Private 1-to-1</option><option>Small group</option><option>Not sure yet</option></select></label></div><label className="mt-5 grid gap-2 text-sm font-bold">Tell us your goals<textarea name="goals" rows="5" className="rounded-2xl border border-black/10 bg-[#FAFAF8] px-4 py-3.5"/></label><button className="btn-primary mt-6" type="submit">Request My Trial <ArrowRight className="ml-2 h-4 w-4"/></button><p className="mt-4 text-xs leading-5 text-[#818985]">This starter build sends the request through your email client. Replace this with your preferred booking/form provider when ready.</p></form></div></section></Page>}
+
+export const metadata = {
+  title: "Book a Free Trial",
+  description:
+    "Book a free trial lesson with Isnad Institute for online Arabic or Quran classes.",
+};
+
+const trialBenefits = [
+  "Discuss your learning goals",
+  "Experience a live teaching session",
+  "Get a starting-level recommendation",
+  "Explore private or small-group options",
+  "No obligation to enroll",
+];
+
+export default function Trial() {
+  return (
+    <Page>
+      <section className="soft-section">
+        <div className="shell grid gap-12 py-16 lg:grid-cols-[.88fr_1.12fr] lg:items-start lg:py-24">
+          <div className="lg:sticky lg:top-28">
+            <p className="eyebrow">Free trial lesson</p>
+            <h1 className="display mt-4">
+              Meet your teacher.
+              <br />
+              <span className="text-[#0F6B4F]">Find your path.</span>
+            </h1>
+            <p className="lead mt-6">
+              Your trial helps us understand your goals, starting point and
+              preferred class format before you decide to enroll.
+            </p>
+            <div className="mt-8 grid gap-3">
+              {trialBenefits.map((benefit) => (
+                <div key={benefit} className="flex gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#0F6B4F]" />
+                  <span className="font-semibold text-[#53615B]">{benefit}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 grid gap-3 border-t border-black/[.06] pt-7 text-sm text-[#66716C] sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              <div className="flex items-center gap-3"><Clock3 className="h-5 w-5 text-[#0F6B4F]" /> Reply within 24 hours</div>
+              <div className="flex items-center gap-3"><ShieldCheck className="h-5 w-5 text-[#0F6B4F]" /> Your details stay private</div>
+            </div>
+          </div>
+          <TrialForm />
+        </div>
+      </section>
+    </Page>
+  );
+}

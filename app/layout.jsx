@@ -17,8 +17,6 @@ export const metadata = {
     apple: "/favicon.png",
   },
 
-  themeColor: "#0F6B4F",
-
   robots: {
     index: true,
     follow: true,
@@ -31,6 +29,10 @@ export const metadata = {
     siteName: "Isnad Institute",
     type: "website",
   },
+};
+
+export const viewport = {
+  themeColor: "#0F6B4F",
 };
 
 export default function RootLayout({ children }) {
